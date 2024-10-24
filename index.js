@@ -9,7 +9,7 @@ function playRound(humanChoice, computerChoice) {
     const humanChoice_ = humanChoice.toLowerCase()
     const computerChoice_ = computerChoice.toLowerCase()
 
-    const choiceRes = `COMPUTER: ${humanChoice_}, YOU: ${computerChoice_} - `
+    const choiceRes = `COMPUTER: ${computerChoice_}, YOU: ${humanChoice_} - `
 
     if (humanChoice_ === computerChoice_) window.alert('Tie')
     else if (humanChoice_ === 'rock' && computerChoice_ === 'paper')
