@@ -3,7 +3,7 @@ const CHOICES = ['Rock', 'Paper', 'Scissors']
 function playRound(humanChoice, computerChoice) {
     if (!humanChoice || !computerChoice) {
         window.alert('Opps! Enter your choices :(')
-        return
+        reload()
     }
 
     const humanChoice_ = humanChoice.toLowerCase()
@@ -25,7 +25,7 @@ function playRound(humanChoice, computerChoice) {
 
     const consent = window.confirm('Play another round?')
     if (!consent) return
-    window.location.reload()
+    reload()
 }
 
 function getComputerChoice() {
@@ -40,6 +40,10 @@ function getHumanChoice() {
         return false
     }
     return choice
+}
+
+function reload() {
+    window.location.reload()
 }
 
 const humanSelection = getHumanChoice()
