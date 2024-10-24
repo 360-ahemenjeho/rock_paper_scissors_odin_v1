@@ -22,6 +22,10 @@ function playRound(humanChoice, computerChoice) {
         window.alert('You loose')
     else if (computerChoice_ === 'paper' && humanChoice_ === 'scissors')
         window.alert('You win!')
+
+    const consent = window.confirm('Play another round?')
+    if (!consent) return
+    window.location.reload()
 }
 
 function getComputerChoice() {
