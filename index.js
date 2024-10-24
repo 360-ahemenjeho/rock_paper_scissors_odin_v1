@@ -9,19 +9,21 @@ function playRound(humanChoice, computerChoice) {
     const humanChoice_ = humanChoice.toLowerCase()
     const computerChoice_ = computerChoice.toLowerCase()
 
+    const choiceRes = `COMPUTER: ${humanChoice_}, YOU: ${computerChoice_} - `
+
     if (humanChoice_ === computerChoice_) window.alert('Tie')
     else if (humanChoice_ === 'rock' && computerChoice_ === 'paper')
-        window.alert('You loose!')
+        window.alert(choiceRes + 'You loose!')
     else if (humanChoice_ === 'paper' && computerChoice_ === 'rock')
-        window.alert('You win!')
+        window.alert(choiceRes + 'You win!')
     else if (humanChoice_ === 'scissors' && computerChoice_ === 'rock')
-        window.alert('You loose!')
+        window.alert(choiceRes + 'You loose!')
     else if (computerChoice_ === 'scissors' && humanChoice_ === 'rock')
-        window.alert('You win!')
+        window.alert(choiceRes + 'You win!')
     else if (computerChoice_ === 'scissors' && humanChoice_ === 'paper')
-        window.alert('You loose')
+        window.alert(choiceRes + 'You loose')
     else if (computerChoice_ === 'paper' && humanChoice_ === 'scissors')
-        window.alert('You win!')
+        window.alert(choiceRes + 'You win!')
 
     const consent = window.confirm('Play another round?')
     if (!consent) return
